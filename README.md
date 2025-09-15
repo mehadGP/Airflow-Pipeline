@@ -1,42 +1,41 @@
-# Airflow CSV ETL Project
+# 🚀 Airflow CSV ETL Project
 
-## Project Description
+## 📌 Project Description
 This project uses **Apache Airflow** with **PySpark** to perform ETL operations on CSV files stored in HDFS.  
 The main tasks include:
 
-1. Checking the existence of the source folder on HDFS.
-2. Validating that CSV files match the expected schema.
-3. Creating a backup of the CSV files.
-4. Copying the files to the destination folder on HDFS.
-5. Sending an email notification upon successful completion.
+1️⃣ Checking the existence of the source folder on HDFS.  
+2️⃣ Validating that CSV files match the expected schema.  
+3️⃣ Creating a backup of the CSV files.  
+4️⃣ Copying the files to the destination folder on HDFS.  
+5️⃣ Sending an email notification upon successful completion.  
 
 ---
 
-## How Airflow Works with This Project
+## ⚙️ How Airflow Works with This Project
 
-- **Airflow Database**:  
+- **🗄️ Airflow Database**:  
   Airflow uses a database (SQLite by default) to track **DAGs** and **task instances**.  
-  It stores metadata like task status (success, failed, running) and execution timestamps.  
+  It stores metadata like task status (✅ success, ❌ failed, ⏳ running) and execution timestamps.  
   It does **not store CSV data**; data remains in HDFS.
 
-- **HDFS**:  
+- **📂 HDFS**:  
   Used to store CSV files, archive copies, and destination files.  
   Airflow and Spark only read/write data from/to HDFS.
 
-- **Spark**:  
+- **⚡ Spark**:  
   Used to process CSV files, validate schema, and transform data if needed.  
   The Spark job is called from Airflow via `PythonOperator`.
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 ```
-airflow-csv-etl/
+Airflow-Pipeline/
 ├── dags/
 │   └── airflow_project.py       # DAG code calling Spark and HDFS operations
 ├── requirements.txt             # Python dependencies
 ├── README.md                    # Project description and usage scenario
-└── .gitignore                   # Files/folders to ignore
 ```
 
 ---
