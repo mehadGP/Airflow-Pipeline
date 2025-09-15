@@ -69,8 +69,8 @@ Place `airflow_project.py` in the `dags/` folder.
 ### 5. Usage Scenario
 1. Airflow checks that `/user/bank/` exists on HDFS.
 2. Spark validates that CSV files match the expected schema.
-3. Airflow backs up files to `/user/bank/archive_new0/`.
-4. Airflow copies files to `/user/hadoop/destination0_csv/`.
+3. Airflow backs up files to `/user/bank/archive_new/`.
+4. Airflow copies files to `/user/hadoop/destination_csv/`.
 5. Airflow sends a success email notification.
 
 ---
