@@ -1,7 +1,7 @@
 # 🚀 Airflow CSV ETL Project
 
 ## 📊 Pipeline Diagram
-![ETL Pipeline](pipeline_diagram.png)
+![ETL Pipeline](aifflow diagram..png)
 
 ## 📌 Project Description
 This project uses **Apache Airflow** with **PySpark** to perform ETL operations on CSV files stored in HDFS.  
